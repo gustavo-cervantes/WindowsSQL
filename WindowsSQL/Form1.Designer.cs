@@ -84,6 +84,7 @@
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Número";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnInserir
             // 
@@ -93,6 +94,7 @@
             this.btnInserir.TabIndex = 4;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click_1);
             // 
             // btnAtualizar
             // 
