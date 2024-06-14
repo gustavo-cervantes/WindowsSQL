@@ -17,12 +17,12 @@ namespace WindowsSQL
         {
             try
             {
-                // Verifica se o número já existe na tabela antes de inserir
-                if (NumeroJaExiste(int.Parse(txtNumero.Text)))
-                {
-                    MessageBox.Show("Não foi possível realizar o seu registro, pois o número já existe na tabela. Por favor, insira um número válido.", "Número já Existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                // Validar número existente na tabela
+                //if (NumeroJaExiste(int.Parse(txtNumero.Text)))
+                //{
+                //    MessageBox.Show("Não foi possível realizar o registro, pois o número já existe na tabela. Por favor, insira um número diferente.", "Número já Existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
 
                 using (var conn = new NpgsqlConnection(connString))
                 {
@@ -41,21 +41,6 @@ namespace WindowsSQL
                 MessageBox.Show($"Ocorreu um erro ao tentar inserir o registro: {ex.Message}", "Erro de Inserção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private bool NumeroJaExiste(int numero)
-        {
-            using (var conn = new NpgsqlConnection(connString))
-            {
-                conn.Open();
-                using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM cadastro WHERE numero = @numero", conn))
-                {
-                    cmd.Parameters.AddWithValue("numero", numero);
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    return count > 0;
-                }
-            }
-        }
-
 
         private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
@@ -117,5 +102,20 @@ namespace WindowsSQL
         {
 
         }
+
+        // Método para verificar se o número já existe na tabela
+        //private bool NumeroJaExiste(int numero)
+        //{
+        //    using (var conn = new NpgsqlConnection(connString))
+        //    {
+        //        conn.Open();
+        //        using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM cadastro WHERE numero = @numero", conn))
+        //        {
+        //            cmd.Parameters.AddWithValue("numero", numero);
+        //            int count = Convert.ToInt32(cmd.ExecuteScalar());
+        //            return count > 0;
+        //        }
+        //    }
+        //}
     }
 }
