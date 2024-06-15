@@ -42,7 +42,7 @@ namespace WindowsSQL
             }
         }
 
-        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        private void btnAtualizarClick(object sender, EventArgs e)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace WindowsSQL
             }
         }
 
-        private void btnDeletar_Click_1(object sender, EventArgs e)
+        private void btnDeletarClick(object sender, EventArgs e)
         {
             try
             {
@@ -92,30 +92,5 @@ namespace WindowsSQL
             txtTexto.Text = "";
             txtNumero.Text = "";
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Aqui você pode carregar dados iniciais ou configurar o formulário
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Método para verificar se o número já existe na tabela
-        //private bool NumeroJaExiste(int numero)
-        //{
-        //    using (var conn = new NpgsqlConnection(connString))
-        //    {
-        //        conn.Open();
-        //        using (var cmd = new NpgsqlCommand("SELECT COUNT(*) FROM cadastro WHERE numero = @numero", conn))
-        //        {
-        //            cmd.Parameters.AddWithValue("numero", numero);
-        //            int count = Convert.ToInt32(cmd.ExecuteScalar());
-        //            return count > 0;
-        //        }
-        //    }
-        //}
     }
 }

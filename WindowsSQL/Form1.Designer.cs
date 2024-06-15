@@ -84,7 +84,6 @@
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Número";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnInserir
             // 
@@ -104,6 +103,7 @@
             this.btnAtualizar.TabIndex = 5;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizarClick);
             // 
             // btnDeletar
             // 
@@ -113,6 +113,7 @@
             this.btnDeletar.TabIndex = 6;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnDeletarClick);
             // 
             // Form1
             // 
