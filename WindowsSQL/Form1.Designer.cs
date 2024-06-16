@@ -93,7 +93,7 @@
             this.btnInserir.TabIndex = 4;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click_1);
+            this.btnInserir.Click += new System.EventHandler(this.btnInserirClick);
             // 
             // btnAtualizar
             // 
@@ -113,7 +113,7 @@
             this.btnDeletar.TabIndex = 6;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnDeletarClick);
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletarClick);
             // 
             // Form1
             // 
